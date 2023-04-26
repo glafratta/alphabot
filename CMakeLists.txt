@@ -41,3 +41,6 @@ target_link_libraries(testMotor alphabot ncurses rt)
 
 add_executable (obstacleAvoid obstacleAvoid.cpp)
 target_link_libraries(obstacleAvoid alphabot ncurses rt)
+
+add_executable(testLR testLR.cpp)
+target_link_libraries(testLR alphabot ncurses rt)
