@@ -132,7 +132,7 @@ void AlphaBot::timerEvent() {
 
 void AlphaBot::setRightWheelSpeed(float speed) {
 	if (!running) return;
-	speed = -speed;
+	speed = speed;
         if (speed < -1)
                 speed = -1;
         if (speed > 1)
@@ -149,7 +149,7 @@ void AlphaBot::setLeftWheelSpeed(float speed) {
                 speed = -1;
         if (speed > 1)
                 speed = 1;
-        leftWheelSpeed = speed;
+        leftWheelSpeed = -speed;
         float max = (float)gpioGetPWMrange(GPIO_MOTORL);
 	speed = speed * speed2pwm;	
         gpioPWM(GPIO_MOTORL,(int)round((motor_rest_pulseduration+speed)*max));
