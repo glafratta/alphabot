@@ -36,6 +36,10 @@ install(TARGETS alphabot EXPORT alphabot-targets
 add_executable (testIO testIO.cpp)
 target_link_libraries(testIO alphabot ncurses rt)
 
+add_executable (calibrate calibrate.cpp)
+target_link_libraries(calibrate alphabot ncurses rt)
+
+
 add_executable (testMotor testMotor.cpp)
 target_link_libraries(testMotor alphabot ncurses rt)
 
@@ -50,3 +54,6 @@ target_link_libraries(testTurn alphabot ncurses rt)
 
 add_executable(testStraight testStraight.cpp)
 target_link_libraries(testStraight alphabot ncurses rt)
+
+add_executable(testStep testStep.cpp)
+target_link_libraries(testStep alphabot ncurses rt)
